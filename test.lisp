@@ -1,5 +1,6 @@
 (ql:quickload :series)
 (ql:quickload :fiveam)
+(load "pac.lisp")
 (in-package :pac)
 
 (test imps 
