@@ -1,6 +1,5 @@
 (ql:quickload :series)
 (ql:quickload :fiveam)
-(ql:quickload :)
 (in-package :pac)
 
 (test imps 
