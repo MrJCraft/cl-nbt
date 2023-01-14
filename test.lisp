@@ -10,3 +10,4 @@
 (test assoc
   (is (= (+ 1 2) (+ 3 1)) "custom error message")
   )
+(run!)
