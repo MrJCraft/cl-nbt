@@ -1,7 +1,6 @@
+(load "pac.lisp")
 (ql:quickload :series)
 (ql:quickload :fiveam)
-(load "pac.lisp")
-(in-package :pac)
 
 (test imps 
   (is (= 3 (impfun0 '(1 1 1 -1 -1 -1))))
@@ -11,4 +10,3 @@
 (test assoc
   (is (= (+ 1 2) (+ 3 1)) "custom error message")
   )
-(run!)
