@@ -10,4 +10,4 @@ jobs:
         with:
           version: 2.2.8
       - name: Test
-        run: sbcl --non-interactive --eval '(load "package.lisp")' --eval '(load "test.lisp")'  --eval "(run!)"
+        run: sbcl --non-interactive --eval '(load "test.lisp")'
