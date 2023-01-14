@@ -1,5 +1,4 @@
 (ql:quickload :series)
-(in-package :pac)
 
 (defun impfun0 (set1)
   (declare (optimize (safety 0) (speed 3)))
