@@ -1,30 +1,13 @@
-name: 'CI'
-
-on:
-  push:
-    branches:
-      - 'main'
-      - 'master'
-  pull_request:
-
+on: [push, pull_request]
 jobs:
-  tests:
+  setup:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        lisp:
-          - sbcl-bin
-          - ccl-bin
-          
-    env:
-      LISP: ${{ matrix.lisp }}
-
     steps:
-      - uses: actions/checkout@v1
-      - uses: 40ants/setup-lisp@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup SBCL
+        uses: cheeze2000/setup-sbcl@v1
         with:
-          asdf-system: cl-info
-      - uses: 40ants/run-tests@v2
-        with:
-          asdf-system: cl-info
+          version: 2.2.8
+      - name: Test
+        run: sbcl --non-interactive --eval "(load \"test.lisp\")" --eval "(run!)"
