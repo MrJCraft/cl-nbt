@@ -1,7 +1,7 @@
-(defpackage pac/test/main
-  (:use :cl :fiveam :pac))
 (in-package :pac/test/main)
-
+(def-suite imps
+  :description "Test my system")
+(in-suite imps)
 (test imps 
   (is (= 3 (impfun0 '(1 1 1 -1 -1 -1))))
   (is (= 3 (impfun1 '(1 1 1 -1 -1 -1))))
