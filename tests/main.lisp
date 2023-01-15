@@ -1,10 +1,7 @@
-(defpackage pac/tests/main
-  (:use :cl :fiveam :pac))
-(in-package :pac/tests/main)
-(def-suite pac/tests/main
-  :description "Test my system")
-(in-suite pac/tests/main)
+(defpackage pac/tests
+  (:use :cl :pac :fiveam))
+(load "tests/test")
 
-(load "test.lisp")
-
+(in-package :pac/tests)
 (run!)
+
