@@ -8,14 +8,16 @@ on:
   pull_request:
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    
+  tests:    
     strategy:
       matrix:
-        lisp:
-          - sbcl-bin
-          - ccl-bin
+        include:
+          - os: ubuntu-latest
+            lisp: sbcl-bin
+          - os: macos-latest
+            lisp: sbcl-bin
+          - os: windows-latest
+            lisp: sbcl-bin
           
     env:
       LISP: ${{ matrix.lisp }}
@@ -31,4 +33,6 @@ jobs:
             {% ifequal quicklisp_dist "ultralisp" %}
             dist ultralisp http://dist.ultralisp.org
             {% endifequal %}
+      - name: test with ${{ matrix.lisp }} on ${{ matrix.os }}
+      - run: sbcl --non-interactive --eval '(load "tests/main.lisp")'
 
