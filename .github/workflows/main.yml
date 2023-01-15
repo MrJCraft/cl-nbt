@@ -48,4 +48,4 @@ jobs:
           # following roswell issue has been solved:
           # https://github.com/roswell/roswell/issues/497
           qlot-version: latest
-      - run: sbcl --non-interactive --eval "(print (ql:client-version))" --eval "(print (asdf:asdf-version))"
+      - run: sbcl --non-interactive --eval '(load "tests/main")'
