@@ -10,4 +10,4 @@ jobs:
         with:
           version: 2.2.8
       - name: Test
-        run: sbcl --non-interactive --eval "(asdf:test-system :pac/test)"
+        run: sbcl --non-interactive --eval '(load "tests/main")'
