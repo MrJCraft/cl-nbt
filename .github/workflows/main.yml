@@ -1,13 +1,34 @@
-on: [push, pull_request]
+name: 'CI'
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'master'
+  pull_request:
+
 jobs:
-  setup:
+  tests:
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        lisp:
+          - sbcl-bin
+          - ccl-bin
+          
+    env:
+      LISP: ${{ matrix.lisp }}
+      OS: ${{ matrix.os }}
+      QUICKLISP_DIST: ${{ matrix.quicklisp-dist }}
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup SBCL
-        uses: cheeze2000/setup-sbcl@v1
+      - uses: actions/checkout@v2
+      - uses: 40ants/setup-lisp@v2
         with:
-          version: 2.2.8
-      - name: Test
-        run: sbcl --non-interactive --eval '(load "tests/main")'
+          asdf-system: cl-info
+          qlfile-template: |
+            {% ifequal quicklisp_dist "ultralisp" %}
+            dist ultralisp http://dist.ultralisp.org
+            {% endifequal %}
+
