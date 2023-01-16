@@ -1,9 +1,8 @@
-(asdf:load-system :pac)
-(asdf:load-system :pac/tests)
-(defpackage pac/tests
-  (:use :cl :pac :fiveam))
-(load "tests/test")
+(in-package #:tests)
+(def-suite :main)
+(in-suite :main)
 
-(in-package :pac/tests)
+(load "tests/l")
+
 (run!)
 
