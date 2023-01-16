@@ -10,4 +10,4 @@ jobs:
         with:
           version: 2.2.8
       - name: Verify installation
-        run: sbcl --non-interactive --eval '(progn (load "tests/package.lisp") (load "tests/main))'
+        run: sbcl --non-interactive --eval '(progn (load "tests/package.lisp") (load "tests/main"))'
