@@ -5,46 +5,4 @@ This is a NBT reading and writing Library.
 
 ## License
 
-MAGALAH PUBLIC LICENSE version 1 or later
-
-Deffinitions:
-
-content: the code, exetuable, bytecode, program, or other works that has been distrubuted with this license, by the copyright holder.
-
-licsensee: "you".
-
-modifications: Any derived works, changes, API's, improvements, Translations, and modifications.
-
-combine: A work that uses the content as a library, or a piece of a larger program.
-
-additions: Any content made to directly connect, or modify the licensed content.
-
-improve: To make the licensed content, easier, faster, simpler, safer, or more portable.
-
-Source Code: Must be human readable and the prefered form of modifying the content.
-
-TERMS AND CONDITIONS:
-
-0. You may copy, the content.
-
-1. You may sell the content, however if sold or redistributed any modifications, made to the program must be release under the MAGALAH PUBLIC LICENSE of any compatible version, however any seperate code that does not directly modify or change the behavior is not subject to this license.
-
-2. You may redistribute the content, however you must also provide the following, you must in some way offer or distribute with the program the human readable source code, and you must distribute the original license with the content in an appropriate way, such as in the program, or in the code, and you may not change the license to add restrictions, or sublicense.
-
-3. You may modify the content in any way, the only exception is when selling or redistributing the modified content you must also release the Code under the MAGALAH PUBLIC LICENSE, or another compatible MAGALAH PUBLIC LICENSE.
-
-4. You may combine content, such as using the content as a library, and using the content as a piece of a larger work, however any modifications or additions made to improve.
-
-5. You did not sign this agreement and are not legally required to do any of these things, you are also not required to copy, redistribute, modify, sell, or combine the licensed content, if you copy, redistribute, modify, sell, or combine then you agree to these terms.
-
-6. You may not copy, modify, improve, sublicense, or make additions to the content except in ways that are expressed by this License, this agreement is void if you and automatically terminates the rights under this license, however anyone who has recieved this content from you may keep their rights as long as they are in full compliance with this License.
-
-7. This License is subject to possible future versions, however the license only agrees tothose possible changes if it states "or later" next to the version. 
-
-
-
-NO WARRANTY
-not even the implied warranty of MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
-
-Contact Information: mrjcraft2021@gmail.com
 
